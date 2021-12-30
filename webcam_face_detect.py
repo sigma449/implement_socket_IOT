@@ -61,11 +61,11 @@ if __name__ == '__main__':
 
 #--------------------add by H.W.----send data to receiver--------------------------
 
-            senderServer.socket_send(str(predicted_label))
-            print("Sent message: %s" % model_result[0])
+            # senderServer.socket_send(str(predicted_label))
+            # print("Sent message: %s" % model_result[0])
 
-            senderServer.socket_send(str(model_result[0][predicted_class]))
-            print("Sent message:" + str(model_result[0][predicted_class]))
+            senderServer.socket_send(str(predicted_label) + str(model_result[0][predicted_class]))
+            print("Sent message:" + str(predicted_label) + str(model_result[0][predicted_class]))
 #--------------------------------end-----------------------------------------------
 
 
